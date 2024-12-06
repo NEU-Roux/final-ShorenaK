@@ -24,6 +24,7 @@ public class PhoneNotification extends AbstractNotification {
     public PhoneNotification(User targetUser, String phoneNumber, String message) {
         super(targetUser, message); // Call the parent constructor
         this.phoneNumber = phoneNumber;
+        this.type = NotificationType.PHONE;
     }
 
     /**

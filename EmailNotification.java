@@ -24,6 +24,7 @@ public class EmailNotification extends AbstractNotification {
     public EmailNotification(User targetUser, String subject, String message) {
         super(targetUser, message); // Call the parent constructor
         this.subject = subject;
+        this.type = NotificationType.EMAIL;
     }
 
     /**
