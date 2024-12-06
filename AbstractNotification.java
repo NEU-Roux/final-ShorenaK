@@ -19,6 +19,7 @@ public abstract class AbstractNotification implements NotificationInterface {
     protected String message;
     protected Date timestamp;
     protected boolean isRead;
+    protected NotificationType type;
 
     /**
      * Constructs an AbstractNotification with a target user and message.
@@ -81,6 +82,15 @@ public abstract class AbstractNotification implements NotificationInterface {
     @Override
     public void markAsRead() {
         this.isRead = true;
+    }
+
+    /**
+     * Retrieves the type of the notification.
+     *
+     * @return the notification type as a {@link NotificationType}
+     */
+    public NotificationType getType() {
+        return type;
     }
 
     /**
