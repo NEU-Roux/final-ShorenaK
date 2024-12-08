@@ -35,7 +35,7 @@ public class Main {
         System.out.println("\nSender Details: " + sender);
         System.out.println("Receiver Details: " + receiver);
 
-        // Create and Send a CallOut
+        // Create and Send a CallOut -- Global CallOuts
         System.out.println("\n**** ---- **** Sending a CallingOut. **** ---- ****");
         CallOutList globalCallOuts = new CallOutList();
         CallOut callOut = sender.sendCallout("We need to discuss before we lose each other.", receiver);
@@ -84,7 +84,7 @@ public class Main {
             }
         }
 
-        // Add Reactions to the CallOut
+        // Add Reactions to the CallOut  LIKE and LOVE ---------- REACTION 
         System.out.println("\n**** ---- **** Adding reactions to the CallingOut. **** ---- ****");
         receiver.reactToCallout(calloutId, ReactionType.LIKE, globalCallOuts);
         sender.reactToCallout(calloutId, ReactionType.LOVE, globalCallOuts);
@@ -112,7 +112,7 @@ public class Main {
             }
         }
 
-        // This is Section below is all about Testing Notification System!
+        // This is Section below is all about Testing Notification System! ---- NOTIFICATION 
         System.out.println("\n**** ---- **** Testing notifications. **** ---- ****");
         NotificationManager notificationManager = new NotificationManager();
 
@@ -145,13 +145,13 @@ public class Main {
         System.out.println("All notifications:");
         notificationManager.getNotificationMessages().forEach(System.out::println);
 
-        // Add Additional Notifications
+        // Add Additional Notifications ----- MUNLTIPLE NOTIFICATION 
         System.out.println("\n**** ---- **** Adding multiple notifications. **** ---- ****");
         notificationManager.addNotification(new EmailNotification(receiver, "Follow Up", "Are we meeting tomorrow?"));
         notificationManager.addNotification(new PhoneNotification(receiver, "111-111-1111", "Reminder: You have a pending CallOut."));
         notificationManager.addNotification(new EmailNotification(receiver, "Urgent", "We need to finish our discussion."));
 
-        // View All Notifications
+        // View All Notifications, testing a map.
         System.out.println("\nAll notifications after adding more:");
         notificationManager.getNotificationMessages().forEach(System.out::println);
 
@@ -159,11 +159,11 @@ public class Main {
         System.out.println("\nUnread Notifications:");
         List<NotificationInterface> filteredUnread = notificationManager.getUnreadNotifications();
         filteredUnread.forEach(notification -> System.out.println(notification.getMessage()));
-
+       
         System.out.println("\nCount of Unread Notifications:");
         System.out.println(notificationManager.countUnreadNotifications());
 
-        // Mark All as Read and Display Updated Count
+        // Mark All as Read and Display Updated Count, testign Map, Reduce. 
         notificationManager.markAllAsRead();
         System.out.println("\nUnread Notifications After Marking All as Read:");
         System.out.println(notificationManager.countUnreadNotifications());
