@@ -6,7 +6,7 @@ This project is very dear to me. For a long time, I have wanted to create the Ca
 ##
 - [Click Here for the Code Walkthrough Recording!](https://northeastern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=0911490e-5063-4ffc-9870-b240011a76ff) 
 
-- [Click Here for the Interview Recording!]()
+- [Click Here for the Interview Recording!](https://northeastern.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=7c2eecdd-cf26-49f6-9573-b2400147709c)
 
 
 ## Tech Stack:
